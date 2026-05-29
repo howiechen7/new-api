@@ -10,6 +10,13 @@
 
 跟踪请求，怎么发给外部AI
 
+1. claude 调用路径：/v1/messages
+2. openai 调用路径：/v1/responses
+
+中继层解析目标服务并处理 controller/relay.go:216
+
+relay/channel/api_request.go:307 DoApiRequest
+
 
 ## 启动
 
