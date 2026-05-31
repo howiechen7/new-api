@@ -13,6 +13,15 @@
 1. claude 调用路径：/v1/messages
 2. openai 调用路径：/v1/responses
 
+请求链路
+
+1. relay-router.go SetRelayRouter
+2. 进入 /v1/messages
+3. relay.go Relay
+4. claude_handler.go ClaudeHelper
+5. adaptor.go DoRequest
+6. api_request.go DoApiRequest
+
 中继层解析目标服务并处理 controller/relay.go:216
 
 relay/channel/api_request.go:307 DoApiRequest
