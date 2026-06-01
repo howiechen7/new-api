@@ -22,10 +22,10 @@
 5. adaptor.go DoRequest
 6. api_request.go DoApiRequest
 
-中继层解析目标服务并处理 controller/relay.go:216
+## 初始化数据库
 
-relay/channel/api_request.go:307 DoApiRequest
-
+1. model/main.go chooseDB。选择数据库
+2. 借助ORM框架gorm，自动根据实体创建表结构。实体字段变更后也会自动同步
 
 ## 启动
 
